@@ -10,6 +10,7 @@ Token = "YOUR_BOT_TOKEN"
 @client.event
 async def on_message(message, poll_in_progress=False):
     if message.content.startswith("!rus_poll"):
+        await client.change_presence(activity=discord.Game(name="!rus_poll"))
         # Check if there is already a poll in progress
         if poll_in_progress:
             await message.channel.send("obecnie trwa głosowanie (dev442)")
