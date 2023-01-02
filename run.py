@@ -6,7 +6,7 @@ client = discord.Client(intents=intents)
 
 poll_in_progress = False
 
-
+Token = "YOUR_BOT_TOKEN"
 @client.event
 async def on_message(message, poll_in_progress=False):
     if message.content.startswith("!rus_poll"):
@@ -95,4 +95,4 @@ async def on_message(message, poll_in_progress=False):
             await message.channel.send("DRAW! :0 holy fuck")
 
 
-client.run("BOT_TOKEN")
+client.run(Token)
